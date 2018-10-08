@@ -122,6 +122,7 @@
 		266D7BB02165714700CB35B0 /* litewait */ = {
 			isa = PBXGroup;
 			children = (
+				26E5CC05216C0EAD001B70BE /* Services */,
 				CD64D2AC2166F37100D9F724 /* New Cell */,
 				26DA8E712165810E00FF9639 /* GoogleService-Info.plist */,
 				266D7BB12165714700CB35B0 /* AppDelegate.swift */,
@@ -151,6 +152,13 @@
 				266D7BD32165714A00CB35B0 /* Info.plist */,
 			);
 			path = litewaitUITests;
+			sourceTree = "<group>";
+		};
+		26E5CC05216C0EAD001B70BE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		3A73E39C6C8107FD5A88C5FC /* Frameworks */ = {
@@ -380,11 +388,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-litewait/Pods-litewait-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
