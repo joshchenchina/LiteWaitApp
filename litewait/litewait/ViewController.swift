@@ -7,12 +7,15 @@
 //
 
 import UIKit
-
+import FirebaseDatabase
 
 class ViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     private var data: [String] = []
+    
+    var ref:DatabaseReference?
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
@@ -29,6 +32,10 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
+        ref?.child("Restaurant/name").setValue("KFC")
+        
         
         for i in 0...1000 {
             data.append("\(i)")

@@ -17,6 +17,7 @@ target 'litewait' do
     # Pods for testing
   end
 
-end
-
 pod 'Firebase/Core'
+pod 'Firebase/Database'
+
+end
