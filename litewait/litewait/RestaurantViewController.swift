@@ -7,24 +7,59 @@
 //
 
 import UIKit
+import MapKit
 
-class RestaurantViewController: UIViewController {
+class RestaurantViewController: UIViewController, CLLocationManagerDelegate{
+    
+    private let locationManager = CLLocationManager()
+    private var previousPoint: CLLocation?
+    private var totalMovementDistance: CLLocationDistance = 0
 
+    @IBOutlet var map: MKMapView!
+    
+    //Authorization
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        print("Authoization status changed to \(status.rawValue)")
+        switch status {
+        case .authorized, .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+            map.showsUserLocation = true
+        default:
+            locationManager.stopUpdatingLocation()
+            map.showsUserLocation = false
+        }
+    }
+    
+/*
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let newLocation = (locations as [CLLocation])[locations.count - 1]
+        
+        let latitudeString = String(format: "%g\u{00B0}", newLocation.coordinate.latitude)
+        Latitude.text = latitudeString
+        
+        let longtitudeString = String(format: "%g\u{00B0}", newLocation.coordinate.longitude)
+        Longitude.text = longtitudeString
+    }
+ */
+    
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let centerLocation = CLLocationCoordinate2DMake(37.396650, -122.061409)
+        let mapSpan = MKCoordinateSpanMake(0.01, 0.01)
+        let mapRegion = MKCoordinateRegionMake(centerLocation, mapSpan)
+        self.map.setRegion(mapRegion, animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    */
+    
+    
+    
 
 }

@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseDatabase
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     private var data: [String] = []
@@ -17,19 +17,28 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     var postData = [String]()
     var databaseHandle:DatabaseHandle?
+    var tableArray = ["Joy Sushi", "Steins", "Thai Kitchen", "Bonchon", "Bobalicious", "Bierhaus"]
+    var segueIndentifiers = ["A","B","C"]
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        
+        return tableArray.count
+        //return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseIdentifier") as! NewTableViewCell
-        let text = data[indexPath.row]
+        //let text = data[indexPath.row]
         cell.imageContainer.image = UIImage(named: "sushi")
-        cell.RestaurantLabel.text = "Joy Sushi"
+        //cell.RestaurantLabel.text = "Joy Sushi"
+        cell.RestaurantLabel.text = tableArray[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        shouldPerformSegue(withIdentifier: segueIndentifiers[indexPath.row], sender: self)
     }
 
     override func viewDidLoad() {

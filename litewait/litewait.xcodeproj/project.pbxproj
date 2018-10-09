@@ -17,6 +17,7 @@
 		26DA8E722165810E00FF9639 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26DA8E712165810E00FF9639 /* GoogleService-Info.plist */; };
 		62B4F62B9F26545868F92732 /* Pods_litewaitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0EA4444BEC8931CBA80FFA /* Pods_litewaitUITests.framework */; };
 		7ABCCEE4593DE24AEA36D480 /* Pods_litewaitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E616A8EE7391126FE948EA /* Pods_litewaitTests.framework */; };
+		A4CF818B216D2BAA000EC142 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CF818A216D2BAA000EC142 /* MapKit.framework */; };
 		CD64D2AB2166EB1B00D9F724 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD64D2AA2166EB1B00D9F724 /* CustomTableViewCell.swift */; };
 		CD64D2AF2166F39400D9F724 /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD64D2AD2166F39400D9F724 /* NewTableViewCell.swift */; };
 		CD64D2B02166F39400D9F724 /* NewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD64D2AE2166F39400D9F724 /* NewTableViewCell.xib */; };
@@ -64,6 +65,7 @@
 		7B6D01A14DB67760C4C5ED67 /* Pods-litewait.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litewait.release.xcconfig"; path = "Pods/Target Support Files/Pods-litewait/Pods-litewait.release.xcconfig"; sourceTree = "<group>"; };
 		81E87D880F836CB5D8BFE9E0 /* Pods-litewaitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litewaitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-litewaitTests/Pods-litewaitTests.release.xcconfig"; sourceTree = "<group>"; };
 		927BEEB7D3CDF27ED2E02C72 /* Pods-litewait.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litewait.debug.xcconfig"; path = "Pods/Target Support Files/Pods-litewait/Pods-litewait.debug.xcconfig"; sourceTree = "<group>"; };
+		A4CF818A216D2BAA000EC142 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CD64D2AA2166EB1B00D9F724 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CD64D2AD2166F39400D9F724 /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
 		CD64D2AE2166F39400D9F724 /* NewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTableViewCell.xib; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4CF818B216D2BAA000EC142 /* MapKit.framework in Frameworks */,
 				D14BCE3920B8C62E45ADE725 /* Pods_litewait.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +170,7 @@
 		3A73E39C6C8107FD5A88C5FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4CF818A216D2BAA000EC142 /* MapKit.framework */,
 				6A029F6CDE01C2D168128635 /* Pods_litewait.framework */,
 				27E616A8EE7391126FE948EA /* Pods_litewaitTests.framework */,
 				6F0EA4444BEC8931CBA80FFA /* Pods_litewaitUITests.framework */,
