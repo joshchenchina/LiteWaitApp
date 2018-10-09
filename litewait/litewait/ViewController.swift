@@ -18,27 +18,36 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var postData = [String]()
     var databaseHandle:DatabaseHandle?
     var tableArray = ["Joy Sushi", "Steins", "Thai Kitchen", "Bonchon", "Bobalicious", "Bierhaus"]
-    var segueIndentifiers = ["A","B","C"]
-
+    //var segueIndentifiers = ["A","B","C"]
     
+    var selectedFod:String = ""
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return tableArray.count
-        //return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseIdentifier") as! NewTableViewCell
         //let text = data[indexPath.row]
-        cell.imageContainer.image = UIImage(named: "sushi")
         //cell.RestaurantLabel.text = "Joy Sushi"
+        cell.imageContainer.image = UIImage(named: "sushi")
         cell.RestaurantLabel.text = tableArray[indexPath.row]
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        shouldPerformSegue(withIdentifier: segueIndentifiers[indexPath.row], sender: self)
+        selectedFod = tableArray[indexPath.row]
+        performSegue(withIdentifier: "A", sender: self)
+        
+        //shouldPerformSegue(withIdentifier: segueIndentifiers[indexPath.row], sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dvc = segue.destination as! RestaurantViewController
+        dvc.food = selectedFod
+        
     }
 
     override func viewDidLoad() {
@@ -59,21 +68,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 self.tableView.reloadData()
     
             }
-        })*/
+        })
         
         for i in 0...1000 {
             data.append("\(i)")
         }
+        */
         
         tableView.dataSource = self
-        
         let newcellNib = UINib(nibName: "NewTableViewCell", bundle: nil)
         tableView.register(newcellNib, forCellReuseIdentifier: "ReuseIdentifier")
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

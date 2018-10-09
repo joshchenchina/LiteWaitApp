@@ -17,6 +17,9 @@ class RestaurantViewController: UIViewController, CLLocationManagerDelegate{
 
     @IBOutlet var map: MKMapView!
     
+    
+    var food:String = ""
+    
     //Authorization
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         print("Authoization status changed to \(status.rawValue)")
@@ -52,6 +55,11 @@ class RestaurantViewController: UIViewController, CLLocationManagerDelegate{
         let mapSpan = MKCoordinateSpanMake(0.01, 0.01)
         let mapRegion = MKCoordinateRegionMake(centerLocation, mapSpan)
         self.map.setRegion(mapRegion, animated: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(food)
     }
     
     override func didReceiveMemoryWarning() {
