@@ -13,8 +13,10 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     private var data: [String] = []
-    
     var ref:DatabaseReference?
+    
+    var postData = [String]()
+    var databaseHandle:DatabaseHandle?
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,8 +36,21 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         
         ref = Database.database().reference()
-        ref?.child("Restaurant/name").setValue("KFC")
-        
+        /*
+        ref?.child("Restaurant").observe(.childAdded, with: { (<#DataSnapshot#>) in
+            //When a child is added under Restaurant
+            //Take the value and put it in postData array
+            //let post = DataSnapshot.value as? String
+            let post = DataSnapshot.value(forKey: <#T##String#>)
+            if let actualPost = post {
+                //Append the data to our post String Array
+                self.postData.append(actualPost as! String)
+                
+                //Reload the Tableview
+                self.tableView.reloadData()
+    
+            }
+        })*/
         
         for i in 0...1000 {
             data.append("\(i)")
