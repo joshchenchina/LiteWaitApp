@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var postData = [String]()
     var databaseHandle:DatabaseHandle?
-    var tableArray = ["Joy Sushi", "Steins", "Thai Kitchen", "Bonchon", "Bobalicious", "Bierhaus"]
+    var tableArray = ["Joy Sushi", "Steins", "Thai House", "Bonchon", "Bobalicious", "Bierhaus"]
     //var segueIndentifiers = ["A","B","C"]
     
     var selectedFod:String = ""
@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseIdentifier") as! NewTableViewCell
         //let text = data[indexPath.row]
         //cell.RestaurantLabel.text = "Joy Sushi"
-        cell.imageContainer.image = UIImage(named: "sushi")
+        cell.imageContainer.image = UIImage(named: "blue")
         cell.RestaurantLabel.text = tableArray[indexPath.row]
         
         return cell
