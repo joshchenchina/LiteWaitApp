@@ -130,6 +130,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Submit Wait Time"/>
+                                        <connections>
+                                            <action selector="submitTime:" destination="SeA-SC-rLX" eventType="touchUpInside" id="gdm-vb-z5Y"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="35 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exW-54-ukd">
                                         <rect key="frame" x="245" y="119" width="130" height="44"/>
@@ -173,11 +176,31 @@
                     </view>
                     <connections>
                         <outlet property="map" destination="DNw-kI-ulp" id="nyF-W8-SXV"/>
+                        <segue destination="58V-Gm-aoT" kind="show" identifier="WaitTime" id="eJo-MO-ST1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKD-tp-X5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1799.2" y="133.5832083958021"/>
+        </scene>
+        <!--Submit Wait Time View Controller-->
+        <scene sceneID="Fpi-VZ-PqL">
+            <objects>
+                <viewController id="58V-Gm-aoT" customClass="SubmitWaitTimeViewController" customModule="litewait" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wkh-hY-rJC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Dwj-W0-Ziw"/>
+                    </view>
+                    <connections>
+                        <segue destination="tz2-AC-vTg" kind="unwind" unwindAction="unwindhereWithSegue:" id="PEx-OE-oio"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3P9-ch-YSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tz2-AC-vTg" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2506" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qt2-jU-CPA">

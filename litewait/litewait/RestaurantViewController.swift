@@ -9,7 +9,10 @@
 import UIKit
 import MapKit
 
-class RestaurantViewController: UIViewController, CLLocationManagerDelegate{
+class RestaurantViewController: UIViewController,
+
+    
+    CLLocationManagerDelegate{
     
     private let locationManager = CLLocationManager()
     private var previousPoint: CLLocation?
@@ -33,6 +36,12 @@ class RestaurantViewController: UIViewController, CLLocationManagerDelegate{
         }
     }
     
+    
+    @IBAction func submitTime(_ sender: Any) {
+        performSegue(withIdentifier: "WaitTime", sender: self)
+        
+    }
+    
 /*
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let newLocation = (locations as [CLLocation])[locations.count - 1]
@@ -44,9 +53,6 @@ class RestaurantViewController: UIViewController, CLLocationManagerDelegate{
         Longitude.text = longtitudeString
     }
  */
-    
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +73,11 @@ class RestaurantViewController: UIViewController, CLLocationManagerDelegate{
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func unwindhere(segue:UIStoryboardSegue) {
+        let comingFrom = segue.source as! SubmitWaitTimeViewController
+//        comingFrom.waitime
+    }
     
     
 
