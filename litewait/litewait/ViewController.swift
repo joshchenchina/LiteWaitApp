@@ -29,8 +29,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseIdentifier") as! NewTableViewCell
-        //let text = data[indexPath.row]
-        //cell.RestaurantLabel.text = "Joy Sushi"
         cell.imageContainer.image = UIImage(named: "blue")
         cell.RestaurantLabel.text = tableArray[indexPath.row]
         
@@ -40,8 +38,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedFod = tableArray[indexPath.row]
         performSegue(withIdentifier: "A", sender: self)
-        
-        //shouldPerformSegue(withIdentifier: segueIndentifiers[indexPath.row], sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -69,10 +65,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
             }
         })
-        
-        for i in 0...1000 {
-            data.append("\(i)")
-        }
+
         */
         
         tableView.dataSource = self

@@ -21,6 +21,7 @@
 		CD64D2AB2166EB1B00D9F724 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD64D2AA2166EB1B00D9F724 /* CustomTableViewCell.swift */; };
 		CD64D2AF2166F39400D9F724 /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD64D2AD2166F39400D9F724 /* NewTableViewCell.swift */; };
 		CD64D2B02166F39400D9F724 /* NewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD64D2AE2166F39400D9F724 /* NewTableViewCell.xib */; };
+		CD971A3D2179502E00D2DA49 /* SubmitWaitTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD971A3C2179502E00D2DA49 /* SubmitWaitTimeViewController.swift */; };
 		CDD8F604216D1766002F30FE /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8F603216D1766002F30FE /* RestaurantViewController.swift */; };
 		D14BCE3920B8C62E45ADE725 /* Pods_litewait.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A029F6CDE01C2D168128635 /* Pods_litewait.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		CD64D2AA2166EB1B00D9F724 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CD64D2AD2166F39400D9F724 /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
 		CD64D2AE2166F39400D9F724 /* NewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTableViewCell.xib; sourceTree = "<group>"; };
+		CD971A3C2179502E00D2DA49 /* SubmitWaitTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitWaitTimeViewController.swift; sourceTree = "<group>"; };
 		CDD8F603216D1766002F30FE /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		D1CBD6819BB84B2EBCE7910F /* Pods-litewaitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litewaitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-litewaitUITests/Pods-litewaitUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 				266D7BB12165714700CB35B0 /* AppDelegate.swift */,
 				266D7BB32165714700CB35B0 /* ViewController.swift */,
 				266D7BB52165714700CB35B0 /* Main.storyboard */,
+				CD971A3C2179502E00D2DA49 /* SubmitWaitTimeViewController.swift */,
 				CDD8F603216D1766002F30FE /* RestaurantViewController.swift */,
 				CD64D2AA2166EB1B00D9F724 /* CustomTableViewCell.swift */,
 				266D7BB82165714A00CB35B0 /* Assets.xcassets */,
@@ -212,6 +215,7 @@
 				266D7BAB2165714700CB35B0 /* Frameworks */,
 				266D7BAC2165714700CB35B0 /* Resources */,
 				CAAFC6267BE8909F251FBBBB /* [CP] Embed Pods Frameworks */,
+				D8B041CC7D6B5DC1966825B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -409,6 +413,32 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-litewait/Pods-litewait-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D8B041CC7D6B5DC1966825B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-litewait/Pods-litewait-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-litewait/Pods-litewait-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -418,6 +448,7 @@
 			files = (
 				CD64D2AB2166EB1B00D9F724 /* CustomTableViewCell.swift in Sources */,
 				CDD8F604216D1766002F30FE /* RestaurantViewController.swift in Sources */,
+				CD971A3D2179502E00D2DA49 /* SubmitWaitTimeViewController.swift in Sources */,
 				266D7BB42165714700CB35B0 /* ViewController.swift in Sources */,
 				CD64D2AF2166F39400D9F724 /* NewTableViewCell.swift in Sources */,
 				266D7BB22165714700CB35B0 /* AppDelegate.swift in Sources */,
