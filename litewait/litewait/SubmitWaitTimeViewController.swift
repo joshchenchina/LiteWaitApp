@@ -10,15 +10,27 @@ import UIKit
 
 class SubmitWaitTimeViewController: UIViewController {
     
-    var waitime:Float = 0
+    
+    @IBOutlet weak var textField: UITextField!
+    var waittime:Float = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.keyboardType = UIKeyboardType.numberPad
+        
+        textField.layer.masksToBounds = false
+        textField.layer.shadowRadius = 3.0
+        textField.layer.shadowColor = UIColor.black.cgColor
+        //textField.layer.shadowOffset = cgSizeMake(1.0, 1.0)
+        textField.layer.shadowOpacity = 1.0
 
-        // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func submitWaitTime(_ sender: Any) {
+        waittime = Float(textField.text!)!
+        performSegue(withIdentifier: "unwinds1", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 

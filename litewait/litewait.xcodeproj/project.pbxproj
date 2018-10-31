@@ -22,6 +22,8 @@
 		CD64D2AF2166F39400D9F724 /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD64D2AD2166F39400D9F724 /* NewTableViewCell.swift */; };
 		CD64D2B02166F39400D9F724 /* NewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD64D2AE2166F39400D9F724 /* NewTableViewCell.xib */; };
 		CD971A3D2179502E00D2DA49 /* SubmitWaitTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD971A3C2179502E00D2DA49 /* SubmitWaitTimeViewController.swift */; };
+		CD971A45217E7B5300D2DA49 /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD971A43217E7B5300D2DA49 /* RestaurantController.swift */; };
+		CD971A47217E7E9900D2DA49 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD971A46217E7E9900D2DA49 /* Restaurant.swift */; };
 		CDD8F604216D1766002F30FE /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8F603216D1766002F30FE /* RestaurantViewController.swift */; };
 		D14BCE3920B8C62E45ADE725 /* Pods_litewait.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A029F6CDE01C2D168128635 /* Pods_litewait.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
@@ -71,6 +73,8 @@
 		CD64D2AD2166F39400D9F724 /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
 		CD64D2AE2166F39400D9F724 /* NewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTableViewCell.xib; sourceTree = "<group>"; };
 		CD971A3C2179502E00D2DA49 /* SubmitWaitTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitWaitTimeViewController.swift; sourceTree = "<group>"; };
+		CD971A43217E7B5300D2DA49 /* RestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantController.swift; sourceTree = "<group>"; };
+		CD971A46217E7E9900D2DA49 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Restaurant.swift; path = ../../../Restaurant.swift; sourceTree = "<group>"; };
 		CDD8F603216D1766002F30FE /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		D1CBD6819BB84B2EBCE7910F /* Pods-litewaitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litewaitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-litewaitUITests/Pods-litewaitUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,7 +133,6 @@
 		266D7BB02165714700CB35B0 /* litewait */ = {
 			isa = PBXGroup;
 			children = (
-				26E5CC05216C0EAD001B70BE /* Services */,
 				CD64D2AC2166F37100D9F724 /* New Cell */,
 				26DA8E712165810E00FF9639 /* GoogleService-Info.plist */,
 				266D7BB12165714700CB35B0 /* AppDelegate.swift */,
@@ -138,6 +141,8 @@
 				CD971A3C2179502E00D2DA49 /* SubmitWaitTimeViewController.swift */,
 				CDD8F603216D1766002F30FE /* RestaurantViewController.swift */,
 				CD64D2AA2166EB1B00D9F724 /* CustomTableViewCell.swift */,
+				CD971A43217E7B5300D2DA49 /* RestaurantController.swift */,
+				CD971A46217E7E9900D2DA49 /* Restaurant.swift */,
 				266D7BB82165714A00CB35B0 /* Assets.xcassets */,
 				266D7BBA2165714A00CB35B0 /* LaunchScreen.storyboard */,
 				266D7BBD2165714A00CB35B0 /* Info.plist */,
@@ -161,13 +166,6 @@
 				266D7BD32165714A00CB35B0 /* Info.plist */,
 			);
 			path = litewaitUITests;
-			sourceTree = "<group>";
-		};
-		26E5CC05216C0EAD001B70BE /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		3A73E39C6C8107FD5A88C5FC /* Frameworks */ = {
@@ -449,6 +447,8 @@
 				CD64D2AB2166EB1B00D9F724 /* CustomTableViewCell.swift in Sources */,
 				CDD8F604216D1766002F30FE /* RestaurantViewController.swift in Sources */,
 				CD971A3D2179502E00D2DA49 /* SubmitWaitTimeViewController.swift in Sources */,
+				CD971A45217E7B5300D2DA49 /* RestaurantController.swift in Sources */,
+				CD971A47217E7E9900D2DA49 /* Restaurant.swift in Sources */,
 				266D7BB42165714700CB35B0 /* ViewController.swift in Sources */,
 				CD64D2AF2166F39400D9F724 /* NewTableViewCell.swift in Sources */,
 				266D7BB22165714700CB35B0 /* AppDelegate.swift in Sources */,

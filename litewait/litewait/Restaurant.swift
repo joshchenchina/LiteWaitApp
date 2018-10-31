@@ -9,7 +9,7 @@
 import UIKit
 
 class Restaurant{
-    var id: Int8?
+    var id: String?
     var restaurantName : String?
     var address : String?
     var cuisine: String?
@@ -19,22 +19,20 @@ class Restaurant{
     var timeUpdated: Int64?
     var currentWaitTime: TimeInterval?
     
-    init(id: Int8, restaurantName: String, address: String, cuisine: String, imageURL: String, locationx: String, locationy: String, timeUpdated: Int64, currentWaitTime: TimeInterval) {
+    init(id: String, dict: [String: AnyObject]) {
         self.id = id
-        self.address = address
-        self.cuisine = cuisine
-        self.imageURL = imageURL
-        self.locationx = locationx
-        self.locationy = locationy
-        self.timeUpdated = timeUpdated
-        self.currentWaitTime = currentWaitTime
+        self.address = dict["address"] as? String
+        self.cuisine = dict["cuisine"] as? String
+        self.imageURL = dict["imageURL"] as? String
+        self.locationx = dict["locationx"] as? String
+        self.locationy = dict["locationy"] as? String
     }
     
-    func  getID() -> Int8{
+    func  getID() -> String{
         return id!
     }
     
-    func setID(id: Int8){
+    func setID(id: String){
         self.id = id
     }
     
@@ -97,6 +95,8 @@ class Restaurant{
     func setCurrentWaitTime(currentWaitTime: TimeInterval){
         self.currentWaitTime = currentWaitTime
     }
+    
+    
     
     //toString() function
     /**

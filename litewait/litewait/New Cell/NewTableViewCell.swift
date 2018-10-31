@@ -12,6 +12,7 @@ class NewTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imageContainer: UIImageView!
     @IBOutlet weak var RestaurantLabel: UILabel!
+    @IBOutlet weak var WaitTimeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
