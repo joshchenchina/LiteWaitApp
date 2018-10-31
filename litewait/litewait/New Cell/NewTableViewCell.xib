@@ -27,9 +27,22 @@
                             <constraint firstAttribute="height" constant="100" id="pYi-vD-nUb"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lm-vf-2yZ">
-                        <rect key="frame" x="6" y="17" width="149" height="39"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurant" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lm-vf-2yZ">
+                        <rect key="frame" x="5" y="17" width="255" height="39"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="mins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIf-ls-i4A">
+                        <rect key="frame" x="273" y="35" width="37" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJx-bg-GLG">
+                        <rect key="frame" x="268" y="10" width="42" height="48"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -38,14 +51,17 @@
                     <constraint firstItem="wiG-RT-zyD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2M5-GN-pNy"/>
                     <constraint firstAttribute="trailing" secondItem="wiG-RT-zyD" secondAttribute="trailing" id="32x-PN-aww"/>
                     <constraint firstItem="wiG-RT-zyD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Raz-pY-x5H"/>
-                    <constraint firstItem="wiG-RT-zyD" firstAttribute="leading" secondItem="5lm-vf-2yZ" secondAttribute="trailing" constant="-155" id="h65-hH-P9W"/>
+                    <constraint firstAttribute="bottom" secondItem="oIf-ls-i4A" secondAttribute="bottom" constant="10" id="kh4-qr-l5v"/>
                     <constraint firstAttribute="bottom" secondItem="wiG-RT-zyD" secondAttribute="bottom" constant="-0.5" id="kyf-uF-FWN"/>
-                    <constraint firstItem="5lm-vf-2yZ" firstAttribute="top" secondItem="wiG-RT-zyD" secondAttribute="bottom" constant="-39" id="x0F-L0-FXL"/>
+                    <constraint firstAttribute="trailing" secondItem="oIf-ls-i4A" secondAttribute="trailing" constant="10" id="p3S-Nd-bAI"/>
+                    <constraint firstAttribute="trailing" secondItem="bJx-bg-GLG" secondAttribute="trailing" constant="10" id="wwP-Ki-xwX"/>
+                    <constraint firstItem="bJx-bg-GLG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="x3B-xg-JGV"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="RestaurantLabel" destination="5lm-vf-2yZ" id="nuR-7X-rQ4"/>
+                <outlet property="WaitTimeLabel" destination="bJx-bg-GLG" id="tld-3T-cHh"/>
                 <outlet property="imageContainer" destination="wiG-RT-zyD" id="SEo-cB-5hK"/>
             </connections>
             <point key="canvasLocation" x="132.80000000000001" y="151.12443778110946"/>
