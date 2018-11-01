@@ -53,7 +53,7 @@ class RestaurantViewController: UIViewController,
     @IBAction func getDirections(_ sender: Any) {
        
         let coordinates = CLLocationCoordinate2DMake(locationX, locationY)
-        let regionSpan = MKCoordinateRegionMake(coordinates, MKCoordinateSpanMake(0.01, 0.02))
+       // let regionSpan = MKCoordinateRegionMake(coordinates, MKCoordinateSpanMake(0.01, 0.02))
         
 //        let options = [
 //            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
