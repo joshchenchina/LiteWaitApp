@@ -10,22 +10,25 @@ import UIKit
 
 class Restaurant{
     var id: String?
-    var restaurantName : String?
+    var name : String?
     var address : String?
     var cuisine: String?
     var imageURL: String?
-    var locationx: String?
-    var locationy: String?
+    var locationx: Double?
+    var locationy: Double?
     var timeUpdated: Int64?
     var currentWaitTime: TimeInterval?
+    var waitingTime: String?
     
     init(id: String, dict: [String: AnyObject]) {
         self.id = id
         self.address = dict["address"] as? String
         self.cuisine = dict["cuisine"] as? String
         self.imageURL = dict["imageURL"] as? String
-        self.locationx = dict["locationx"] as? String
-        self.locationy = dict["locationy"] as? String
+        self.locationx = dict["locationx"] as? Double
+        self.locationy = dict["locationy"] as? Double
+        self.name = dict["name"] as? String
+        self.waitingTime = dict["waitingTime"] as? String
     }
     
     func  getID() -> String{
@@ -36,12 +39,12 @@ class Restaurant{
         self.id = id
     }
     
-    func getRestaurantName() -> String{
-        return restaurantName!
+    func getName() -> String{
+        return name!
     }
     
-    func setRestaurantName(restaurantName: String){
-        self.restaurantName = restaurantName
+    func setRestaurantName(name: String){
+        self.name = name
     }
     
     func getCuisine() -> String{
@@ -60,19 +63,19 @@ class Restaurant{
         self.imageURL = imageURL
     }
     
-    func getLocationx() -> String{
+    func getLocationx() -> Double{
         return locationx!
     }
     
-    func setLocationx(locationx: String){
+    func setLocationx(locationx: Double){
         self.locationx = locationx
     }
     
-    func getLocationy() -> String{
+    func getLocationy() -> Double{
         return locationy!
     }
     
-    func setLocationy(locationy: String){
+    func setLocationy(locationy: Double){
         self.locationy = locationy
     }
     
@@ -94,6 +97,14 @@ class Restaurant{
     
     func setCurrentWaitTime(currentWaitTime: TimeInterval){
         self.currentWaitTime = currentWaitTime
+    }
+    
+    func getWaitingTime() -> String{
+        return waitingTime!
+    }
+    
+    func setWaitingTime(waitingTime: String){
+        self.waitingTime = waitingTime
     }
     
     
