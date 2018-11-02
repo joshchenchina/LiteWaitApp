@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class RestaurantViewController: UIViewController,
 
@@ -35,9 +36,16 @@ class RestaurantViewController: UIViewController,
         case .authorized, .authorizedWhenInUse:
             locationManager.startUpdatingLocation()
             map.showsUserLocation = true
+            break
         default:
             locationManager.stopUpdatingLocation()
             map.showsUserLocation = false
+//            locationManager.startUpdatingLocation()
+//            self.map.showsUserLocation = true
+//            let centerLocation = CLLocationCoordinate2DMake(37.4105, -122.0598)
+//            let mapSpan = MKCoordinateSpanMake(0.01, 0.01)
+//            let mapRegion = MKCoordinateRegionMake(centerLocation, mapSpan)
+//            self.map.setRegion(mapRegion, animated: true)
         }
     }
     override func viewDidLayoutSubviews() {
@@ -66,27 +74,40 @@ class RestaurantViewController: UIViewController,
         mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
     }
     
-    /*
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let newLocation = (locations as [CLLocation])[locations.count - 1]
         
-        let latitudeString = String(format: "%g\u{00B0}", newLocation.coordinate.latitude)
-        Latitude.text = latitudeString
+//        let latitudeString = String(format: "%g\u{00B0}", newLocation.coordinate.latitude)
+//        Latitude.text = latitudeString
         
-        let longtitudeString = String(format: "%g\u{00B0}", newLocation.coordinate.longitude)
-        Longitude.text = longtitudeString
+//        let longtitudeString = String(format: "%g\u{00B0}", newLocation.coordinate.longitude)
+//        Longitude.text = longtitudeString
+        
+        let centerLocation = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude)
+        let mapSpan = MKCoordinateSpanMake(0.01, 0.01)
+        let mapRegion = MKCoordinateRegionMake(centerLocation, mapSpan)
+        self.map.setRegion(mapRegion, animated: true)
     }
- */
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         restaurantLabel?.text = restaurantName
         waitLabel?.text = waitName
-        let centerLocation = CLLocationCoordinate2DMake(37.4105, -122.0598)
-        let mapSpan = MKCoordinateSpanMake(0.01, 0.01)
-        let mapRegion = MKCoordinateRegionMake(centerLocation, mapSpan)
-        self.map.setRegion(mapRegion, animated: true)
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        // mapview.showUserlocation = true
+        
+//        let centerLocation = CLLocationCoordinate2DMake(37.4105, -122.0598)
+//        let mapSpan = MKCoordinateSpanMake(0.01, 0.01)
+//        let mapRegion = MKCoordinateRegionMake(centerLocation, mapSpan)
+//        self.map.setRegion(mapRegion, animated: true)
+        
+        if CLLocationManager.locationServicesEnabled() {
+            print("foo")
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
