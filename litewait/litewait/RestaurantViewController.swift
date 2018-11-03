@@ -28,6 +28,7 @@ class RestaurantViewController: UIViewController,
     var waitName:String = ""
     var locationX: Double = 0
     var locationY: Double = 0
+    var displayed: Bool = false
     
     //Authorization
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -88,6 +89,15 @@ class RestaurantViewController: UIViewController,
         let mapSpan = MKCoordinateSpanMake(0.01, 0.01)
         let mapRegion = MKCoordinateRegionMake(centerLocation, mapSpan)
         self.map.setRegion(mapRegion, animated: true)
+        
+    
+        let coordinate = CLLocation(latitude: locationY, longitude: locationX)
+        let distanceInMeters = coordinate.distance(from: newLocation)
+        if displayed == false && distanceInMeters >= 1000 {
+            self.Alert(Message: "You are too far away from the restaurant!")
+            displayed = true
+        }
+
     }
     
     override func viewDidLoad() {
@@ -98,6 +108,8 @@ class RestaurantViewController: UIViewController,
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
+        
+        
         // mapview.showUserlocation = true
         
 //        let centerLocation = CLLocationCoordinate2DMake(37.4105, -122.0598)
@@ -126,6 +138,14 @@ class RestaurantViewController: UIViewController,
         //uwt = String(comingFrom.waittime)
         let uwt = Int(comingFrom.waittime)
         waitLabel.text = String(uwt)
+    }
+    
+    func Alert (Message: String){
+        let alert = UIAlertController(title: "Alert!", message: Message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+        
     }
     
     
