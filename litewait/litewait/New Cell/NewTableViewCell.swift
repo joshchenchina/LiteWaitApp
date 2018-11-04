@@ -12,6 +12,8 @@ class NewTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imageContainer: UIImageView!
     @IBOutlet weak var RestaurantLabel: UILabel!
+    @IBOutlet weak var WaitTimeLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

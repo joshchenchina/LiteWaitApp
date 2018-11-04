@@ -16,11 +16,15 @@
 		266D7BD22165714A00CB35B0 /* litewaitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D7BD12165714A00CB35B0 /* litewaitUITests.swift */; };
 		26DA8E722165810E00FF9639 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26DA8E712165810E00FF9639 /* GoogleService-Info.plist */; };
 		62B4F62B9F26545868F92732 /* Pods_litewaitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0EA4444BEC8931CBA80FFA /* Pods_litewaitUITests.framework */; };
+		6589864D218BA71D001C27F7 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589864C218BA71D001C27F7 /* Restaurant.swift */; };
 		7ABCCEE4593DE24AEA36D480 /* Pods_litewaitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E616A8EE7391126FE948EA /* Pods_litewaitTests.framework */; };
+		A4537B54218D17FE008E0ADB /* Checkinternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4537B53218D17FE008E0ADB /* Checkinternet.swift */; };
 		A4CF818B216D2BAA000EC142 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CF818A216D2BAA000EC142 /* MapKit.framework */; };
 		CD64D2AB2166EB1B00D9F724 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD64D2AA2166EB1B00D9F724 /* CustomTableViewCell.swift */; };
 		CD64D2AF2166F39400D9F724 /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD64D2AD2166F39400D9F724 /* NewTableViewCell.swift */; };
 		CD64D2B02166F39400D9F724 /* NewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD64D2AE2166F39400D9F724 /* NewTableViewCell.xib */; };
+		CD971A3D2179502E00D2DA49 /* SubmitWaitTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD971A3C2179502E00D2DA49 /* SubmitWaitTimeViewController.swift */; };
+		CD971A45217E7B5300D2DA49 /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD971A43217E7B5300D2DA49 /* RestaurantController.swift */; };
 		CDD8F604216D1766002F30FE /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8F603216D1766002F30FE /* RestaurantViewController.swift */; };
 		D14BCE3920B8C62E45ADE725 /* Pods_litewait.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A029F6CDE01C2D168128635 /* Pods_litewait.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
@@ -59,16 +63,20 @@
 		266D7BD32165714A00CB35B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26DA8E712165810E00FF9639 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		27E616A8EE7391126FE948EA /* Pods_litewaitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_litewaitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6589864C218BA71D001C27F7 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		6A029F6CDE01C2D168128635 /* Pods_litewait.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_litewait.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F0EA4444BEC8931CBA80FFA /* Pods_litewaitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_litewaitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73BE30B6DED28C6C3576290D /* Pods-litewaitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litewaitUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-litewaitUITests/Pods-litewaitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B6D01A14DB67760C4C5ED67 /* Pods-litewait.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litewait.release.xcconfig"; path = "Pods/Target Support Files/Pods-litewait/Pods-litewait.release.xcconfig"; sourceTree = "<group>"; };
 		81E87D880F836CB5D8BFE9E0 /* Pods-litewaitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litewaitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-litewaitTests/Pods-litewaitTests.release.xcconfig"; sourceTree = "<group>"; };
 		927BEEB7D3CDF27ED2E02C72 /* Pods-litewait.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litewait.debug.xcconfig"; path = "Pods/Target Support Files/Pods-litewait/Pods-litewait.debug.xcconfig"; sourceTree = "<group>"; };
+		A4537B53218D17FE008E0ADB /* Checkinternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkinternet.swift; sourceTree = "<group>"; };
 		A4CF818A216D2BAA000EC142 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CD64D2AA2166EB1B00D9F724 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CD64D2AD2166F39400D9F724 /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
 		CD64D2AE2166F39400D9F724 /* NewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTableViewCell.xib; sourceTree = "<group>"; };
+		CD971A3C2179502E00D2DA49 /* SubmitWaitTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitWaitTimeViewController.swift; sourceTree = "<group>"; };
+		CD971A43217E7B5300D2DA49 /* RestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantController.swift; sourceTree = "<group>"; };
 		CDD8F603216D1766002F30FE /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		D1CBD6819BB84B2EBCE7910F /* Pods-litewaitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litewaitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-litewaitUITests/Pods-litewaitUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +113,7 @@
 		266D7BA52165714700CB35B0 = {
 			isa = PBXGroup;
 			children = (
+				A4537B53218D17FE008E0ADB /* Checkinternet.swift */,
 				266D7BB02165714700CB35B0 /* litewait */,
 				266D7BC52165714A00CB35B0 /* litewaitTests */,
 				266D7BD02165714A00CB35B0 /* litewaitUITests */,
@@ -127,14 +136,16 @@
 		266D7BB02165714700CB35B0 /* litewait */ = {
 			isa = PBXGroup;
 			children = (
-				26E5CC05216C0EAD001B70BE /* Services */,
 				CD64D2AC2166F37100D9F724 /* New Cell */,
 				26DA8E712165810E00FF9639 /* GoogleService-Info.plist */,
 				266D7BB12165714700CB35B0 /* AppDelegate.swift */,
 				266D7BB32165714700CB35B0 /* ViewController.swift */,
 				266D7BB52165714700CB35B0 /* Main.storyboard */,
+				6589864C218BA71D001C27F7 /* Restaurant.swift */,
+				CD971A3C2179502E00D2DA49 /* SubmitWaitTimeViewController.swift */,
 				CDD8F603216D1766002F30FE /* RestaurantViewController.swift */,
 				CD64D2AA2166EB1B00D9F724 /* CustomTableViewCell.swift */,
+				CD971A43217E7B5300D2DA49 /* RestaurantController.swift */,
 				266D7BB82165714A00CB35B0 /* Assets.xcassets */,
 				266D7BBA2165714A00CB35B0 /* LaunchScreen.storyboard */,
 				266D7BBD2165714A00CB35B0 /* Info.plist */,
@@ -158,13 +169,6 @@
 				266D7BD32165714A00CB35B0 /* Info.plist */,
 			);
 			path = litewaitUITests;
-			sourceTree = "<group>";
-		};
-		26E5CC05216C0EAD001B70BE /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		3A73E39C6C8107FD5A88C5FC /* Frameworks */ = {
@@ -212,6 +216,7 @@
 				266D7BAB2165714700CB35B0 /* Frameworks */,
 				266D7BAC2165714700CB35B0 /* Resources */,
 				CAAFC6267BE8909F251FBBBB /* [CP] Embed Pods Frameworks */,
+				D8B041CC7D6B5DC1966825B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -409,6 +414,32 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-litewait/Pods-litewait-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D8B041CC7D6B5DC1966825B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-litewait/Pods-litewait-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-litewait/Pods-litewait-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -418,6 +449,10 @@
 			files = (
 				CD64D2AB2166EB1B00D9F724 /* CustomTableViewCell.swift in Sources */,
 				CDD8F604216D1766002F30FE /* RestaurantViewController.swift in Sources */,
+				CD971A3D2179502E00D2DA49 /* SubmitWaitTimeViewController.swift in Sources */,
+				CD971A45217E7B5300D2DA49 /* RestaurantController.swift in Sources */,
+				6589864D218BA71D001C27F7 /* Restaurant.swift in Sources */,
+				A4537B54218D17FE008E0ADB /* Checkinternet.swift in Sources */,
 				266D7BB42165714700CB35B0 /* ViewController.swift in Sources */,
 				CD64D2AF2166F39400D9F724 /* NewTableViewCell.swift in Sources */,
 				266D7BB22165714700CB35B0 /* AppDelegate.swift in Sources */,
@@ -595,6 +630,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5AJ9Z6K7AS;
 				INFOPLIST_FILE = litewait/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -613,6 +649,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5AJ9Z6K7AS;
 				INFOPLIST_FILE = litewait/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
