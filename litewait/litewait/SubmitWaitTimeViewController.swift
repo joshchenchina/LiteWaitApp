@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class SubmitWaitTimeViewController: UIViewController {
     
     
     @IBOutlet weak var textField: UITextField!
     var waittime:Float = 0
+    var uid: String = ""
+    var ref:DatabaseReference?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +40,8 @@ class SubmitWaitTimeViewController: UIViewController {
     @IBAction func submitWaitTime(_ sender: Any) {
         waittime = Float(textField.text!)!
         performSegue(withIdentifier: "unwinds1", sender: self)
+        ref = Database.database().reference()
+        ref?.child("Restaurant").child(uid).updateChildValues(["waitTime": self.textField.text!])
     }
     
     /*

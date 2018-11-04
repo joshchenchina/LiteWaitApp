@@ -30,6 +30,7 @@ class RestaurantViewController: UIViewController,
     var locationY: Double = 0
     var displayed: Bool = false
     var distanceInMeters: Double = 0
+    var uid: String = ""
     
     //Authorization
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -47,6 +48,13 @@ class RestaurantViewController: UIViewController,
     }
     override func viewDidLayoutSubviews() {
         print("Y Location \(locationY)")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let swt = segue.destination as? SubmitWaitTimeViewController
+        {
+            swt.uid = uid
+        }
     }
     
     @IBAction func getDirections(_ sender: Any) {
