@@ -107,6 +107,13 @@ class Restaurant{
         self.waitingTime = waitingTime
     }
     
+    func getAddress() -> String{
+        return address!
+    }
+    
+    func setAddress(address: String){
+        self.address = address
+    }
     
     
     

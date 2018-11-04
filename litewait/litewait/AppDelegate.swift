@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         GMSPlacesClient.provideAPIKey("AIzaSyAeAfwomQpJa9SGBE3hEUmxEp0GIBSoAvs")
         GMSServices.provideAPIKey("AIzaSyAeAfwomQpJa9SGBE3hEUmxEp0GIBSoAvs")
+        
+        UINavigationBar.appearance().barTintColor = .white
+        UINavigationBar.appearance().tintColor = .darkGray
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().isTranslucent = false
         return true
     }
 

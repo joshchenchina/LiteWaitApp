@@ -17,13 +17,21 @@ class SubmitWaitTimeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.keyboardType = UIKeyboardType.numberPad
-        
         textField.layer.masksToBounds = false
         textField.layer.shadowRadius = 3.0
         textField.layer.shadowColor = UIColor.black.cgColor
-        //textField.layer.shadowOffset = cgSizeMake(1.0, 1.0)
         textField.layer.shadowOpacity = 1.0
+        
+        setupNavigationBarItems()
 
+    }
+    
+    private func setupNavigationBarItems(){
+        let image = UIImage(named: "NavBar")
+        let titleImageView = UIImageView(image: image)
+        titleImageView.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        titleImageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = titleImageView
     }
     
     @IBAction func submitWaitTime(_ sender: Any) {

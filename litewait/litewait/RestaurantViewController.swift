@@ -29,6 +29,7 @@ class RestaurantViewController: UIViewController,
     var locationX: Double = 0
     var locationY: Double = 0
     var displayed: Bool = false
+    var distanceInMeters: Double = 0
     
     //Authorization
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -41,34 +42,17 @@ class RestaurantViewController: UIViewController,
         default:
             locationManager.stopUpdatingLocation()
             map.showsUserLocation = false
-//            locationManager.startUpdatingLocation()
-//            self.map.showsUserLocation = true
-//            let centerLocation = CLLocationCoordinate2DMake(37.4105, -122.0598)
-//            let mapSpan = MKCoordinateSpanMake(0.01, 0.01)
-//            let mapRegion = MKCoordinateRegionMake(centerLocation, mapSpan)
-//            self.map.setRegion(mapRegion, animated: true)
+
         }
     }
     override func viewDidLayoutSubviews() {
         print("Y Location \(locationY)")
     }
     
-    
-    @IBAction func submitTime(_ sender: Any) {
-        performSegue(withIdentifier: "WaitTime", sender: self)
-        
-    }
-    
     @IBAction func getDirections(_ sender: Any) {
        
         let coordinates = CLLocationCoordinate2DMake(locationX, locationY)
-       // let regionSpan = MKCoordinateRegionMake(coordinates, MKCoordinateSpanMake(0.01, 0.02))
-        
-//        let options = [
-//            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
-//            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span),
-//            MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving
-//        ]
+
         let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
         let mapItem = MKMapItem(placemark: placemark)
         mapItem.name = "\(restaurantName)"
@@ -79,25 +63,23 @@ class RestaurantViewController: UIViewController,
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let newLocation = (locations as [CLLocation])[locations.count - 1]
         
-//        let latitudeString = String(format: "%g\u{00B0}", newLocation.coordinate.latitude)
-//        Latitude.text = latitudeString
-        
-//        let longtitudeString = String(format: "%g\u{00B0}", newLocation.coordinate.longitude)
-//        Longitude.text = longtitudeString
-        
         let centerLocation = CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude)
         let mapSpan = MKCoordinateSpanMake(0.01, 0.01)
         let mapRegion = MKCoordinateRegionMake(centerLocation, mapSpan)
         self.map.setRegion(mapRegion, animated: true)
         
-    
         let coordinate = CLLocation(latitude: locationY, longitude: locationX)
-        let distanceInMeters = coordinate.distance(from: newLocation)
+        distanceInMeters = coordinate.distance(from: newLocation)
+        
+    }
+    
+    @IBAction func submitTime(_ sender: Any) {
         if displayed == false && distanceInMeters >= 1000 {
             self.Alert(Message: "You are too far away from the restaurant!")
             displayed = true
         }
-
+        performSegue(withIdentifier: "WaitTime", sender: self)
+        
     }
     
     override func viewDidLoad() {
@@ -109,17 +91,19 @@ class RestaurantViewController: UIViewController,
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         
-        
-        // mapview.showUserlocation = true
-        
-//        let centerLocation = CLLocationCoordinate2DMake(37.4105, -122.0598)
-//        let mapSpan = MKCoordinateSpanMake(0.01, 0.01)
-//        let mapRegion = MKCoordinateRegionMake(centerLocation, mapSpan)
-//        self.map.setRegion(mapRegion, animated: true)
+        setupNavigationBarItems()
         
         if CLLocationManager.locationServicesEnabled() {
             print("foo")
         }
+    }
+    
+    private func setupNavigationBarItems(){
+        let image = UIImage(named: "NavBar")
+        let titleImageView = UIImageView(image: image)
+        titleImageView.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        titleImageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = titleImageView
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -135,7 +119,6 @@ class RestaurantViewController: UIViewController,
     
     @IBAction func unwindhere(segue:UIStoryboardSegue) {
         let comingFrom = segue.source as! SubmitWaitTimeViewController
-        //uwt = String(comingFrom.waittime)
         let uwt = Int(comingFrom.waittime)
         waitLabel.text = String(uwt)
     }
