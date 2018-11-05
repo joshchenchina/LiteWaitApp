@@ -41,7 +41,7 @@ class SubmitWaitTimeViewController: UIViewController {
         waittime = Float(textField.text!)!
         performSegue(withIdentifier: "unwinds1", sender: self)
         ref = Database.database().reference()
-        ref?.child("Restaurant").child(uid).updateChildValues(["waitTime": self.textField.text!])
+        ref?.child("Restaurant").child(uid).updateChildValues(["waitingTime": self.textField.text!])
     }
     
     /*
