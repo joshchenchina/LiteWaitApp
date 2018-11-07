@@ -19,6 +19,7 @@ class Restaurant{
     var timeUpdated: Int64?
     var currentWaitTime: TimeInterval?
     var waitingTime: String?
+    var waitingTimeStamp: Int64?
     
     init(id: String, dict: [String: AnyObject]) {
         self.id = id
@@ -29,6 +30,15 @@ class Restaurant{
         self.locationy = dict["locationy"] as? Double
         self.name = dict["name"] as? String
         self.waitingTime = dict["waitingTime"] as? String
+        self.waitingTimeStamp = dict["waitingTimeStamp"] as? Int64
+    }
+    
+    func getWaitingTimeStamp() -> Int64{
+        return waitingTimeStamp!
+    }
+    
+    func setWaitingTimeStamp(waitingTimeStamp: Int64){
+        self.waitingTimeStamp = waitingTimeStamp
     }
     
     func  getID() -> String{

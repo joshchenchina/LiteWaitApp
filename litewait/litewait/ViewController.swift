@@ -23,6 +23,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var locationX: Double = 0
     var locationY: Double = 0
     var totalDistance: Double = 0
+    var waitingTimeStamp :Int64 = 0
     var uid: String = ""
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
